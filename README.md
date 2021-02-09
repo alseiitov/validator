@@ -8,7 +8,7 @@ $ go get -u github.com/alseiitov/validator
 
 ### Usage
 | Flag        | Description                                                                                                                  |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| :---------- | :--------------------------------------------------------------------------------------------------------------------------- |
 | `required`  | `string` length must be more than zero and it must contain not only spaces, tabs or newlines<br>`int` value must not be zero |
 | `password`  | `string` must contain at least one lowercase, one uppercase, one number and one symbol                                       |
 | `email`     | `string` must be a valid email address                                                                                       |
