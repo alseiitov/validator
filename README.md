@@ -12,7 +12,7 @@ $ go get -u github.com/alseiitov/validator
 | `required`  | `string` length must be more than zero and it must contain not only spaces, tabs or newlines<br>`int` value must not be zero |
 | `password`  | `string` must contain at least one lowercase, one uppercase, one number and one symbol                                       |
 | `email`     | `string` must be a valid email address                                                                                       |
-| `username`  | `string` must contain only letters, digits, dots, underscoreы and dashes                                                     |
+| `username`  | `string` must contain only letters, digits, dots, underscores and dashes                                                     |
 | `min=value` | `string` length must be greater than or equal to given value<br>`int` value must be greater than or equal to given value     |
 | `max=value` | `string` length must be less than or equal to given value<br>`int` value must be less than or equal to given value           |
 
