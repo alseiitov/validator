@@ -26,7 +26,7 @@ package main
 import (
 	"fmt"
 
-	"./repos/validator"
+	"github.com/alseiitov/validator"
 )
 
 type user struct {
