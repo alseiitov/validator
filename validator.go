@@ -20,12 +20,17 @@ func Validate(data interface{}) error {
 		data := reflect.ValueOf(data).Field(i).Interface()
 
 		flagsStr, ok := field.Tag.Lookup("validator")
-		if !ok {
+		if !ok && kind != reflect.Struct {
 			continue
 		}
 		flags := parseFlags(flagsStr)
 
-		if kind == reflect.Array || kind == reflect.Slice {
+		if kind == reflect.Struct {
+			err := Validate(data)
+			if err != nil {
+				return err
+			}
+		} else if kind == reflect.Array || kind == reflect.Slice {
 			s := reflect.ValueOf(data)
 			if hasRequiredFlag(flags) && s.Len() == 0 {
 				return newError(field.Name, "is required")
